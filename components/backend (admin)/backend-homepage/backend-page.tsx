@@ -12,7 +12,7 @@ export default function BackendPage() {
 
       <div className={styles['gray-background-content-container']}>
         <div>
-          <h2>ACTIVE COLLECTIONS</h2>
+          <h2>ACTIVE COLLECTIONS...</h2>
         </div>
 
         <GET_ALL_CONTAINERS/>
