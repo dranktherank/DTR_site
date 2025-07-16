@@ -1,0 +1,16 @@
+.gap-between-horizontal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: solid;
+}
+
+.gray-background-content-container {
+  background-color: gray;
+  margin: 30px;
+  
+}
+
+.button {
+  background-color: white;
+}

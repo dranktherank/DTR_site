@@ -1,0 +1,26 @@
+/*IMAGE GALLERY FAMILY*/
+  /*PARENT*/
+  .image-gallery-container 
+  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 30px;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  width: 100%;
+  scroll-behavior: smooth; /* optional for smoother scrolling */
+  }
+    /*CHILD*/
+    .image-gallery-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .image-gallery-img {
+      max-height:300px;
+      width: auto;
+    }
+/*END IMAGE GALLERY FAMILY*/

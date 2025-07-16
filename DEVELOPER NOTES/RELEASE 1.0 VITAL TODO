@@ -1,0 +1,30 @@
+This is a list of things we absolutely have to iron out before making our site public for the first time.
+Just making this because I'm setting up complex shit with half-ass configuration so that I can test and work with it.
+
+1. uuid generation and creation (specifically storage in SupaBase)
+    Current uuid process:
+        1. User joins site    
+            2. If they have a uuid stored in cookies, we load the associated account (right now that has no functionality)
+            2. If they don't have a uuid in cookies, we give them one, and add the uuid to USER table in SupaBase
+    
+    PROBLEM: Someone with a cookie-erasing browser extension on fullauto and spamming refresh could flood SupaBase with infinite rows
+        - this potentially costs money or runs us out of free storage for no reason
+        - this is also funny and easy to do
+    
+    SOLUTION: 
+        1. We could make a new COLUMN in USERS for last seen i.p.
+            - When making the user a new uuid, we check their last seen ip, and if an existing uuid has that last seen ip, we can assign the user their normal uuid
+                - This adds a VPN to the workflow of whoever would be abusing our site this way...
+        
+        2. We could set a maximum for the number of new users we accept a day
+            - This is potentially bad like if we go viral (a certainty) and hit that limit organically
+            - As long as uuid isn't necessary for normal site function, this is fine
+                - Limit uuid system to nonvital functionality like saving user's name and cart
+
+        3. Finally, if someone is spamming uuids like this, we can delete uuids and the associated user data that aren't in use
+            - Make DATE LAST SEEN column
+                - If DATE CREATED and DATE LAST SEEN are > [time interval] apart, delete the account.
+
+
+
+        

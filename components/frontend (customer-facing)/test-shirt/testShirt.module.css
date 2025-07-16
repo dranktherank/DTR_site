@@ -1,0 +1,19 @@
+/*PRODUCT IMAGE GALLERY FAMILY*/
+  /*PARENT*/
+  .product-image-gallery-container 
+  {
+  display: flex;
+  flex-direction: row;
+  }
+  .test-shirt-description-text-container
+  {
+    color:white
+  }
+  .product-row-5050-split
+  {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 1000px 10px;;
+    background-color: black;
+  }
+/*END PRODUCT IMAGE GALLERY FAMILY*/

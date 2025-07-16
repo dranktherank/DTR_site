@@ -1,0 +1,18 @@
+.grid {
+  column-count: 3;
+  column-gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.imageWrapper {
+  break-inside: avoid;
+  margin: 0;
+  width: 100%;
+}
+
+.responsiveImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
