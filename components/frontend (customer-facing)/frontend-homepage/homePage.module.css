@@ -10,7 +10,6 @@
   overflow-x: auto;
   flex-wrap: wrap;
   width: 100%;
-  scroll-behavior: smooth; /* optional for smoother scrolling */
   }
     /*CHILD*/
     .image-gallery-image {
