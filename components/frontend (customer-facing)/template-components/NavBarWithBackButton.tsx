@@ -9,7 +9,7 @@ export default function NavBarWithBackButton() {
             <a href="/">
             <img
               className='nav-logo'
-              src="/logo_placeholder3.png"
+              src="/logo_webp.webp"
               alt="DTR Logo"
             />
             </a>
