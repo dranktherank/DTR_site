@@ -16,3 +16,28 @@
   height: auto;
   display: block;
 }
+
+
+
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;  
+}
+
+.loaderBar {
+  width: 30%;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.loaderProgress {
+  height: 100%;
+  background-color: #464646; /* or any brand color */
+  transition: width 0.3s ease;
+}

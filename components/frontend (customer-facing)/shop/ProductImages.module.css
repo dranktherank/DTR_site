@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.images {
+  display: flex;
+  width: 66.66%;
+  height: 100%;
+}
+
+.responsiveImage {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text {
+  width: 33.33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
