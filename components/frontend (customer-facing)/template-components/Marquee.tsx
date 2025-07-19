@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import ClientRenderedBackButton from './ClientRenderedBackButton';
 
 export default function Marquee() {
 

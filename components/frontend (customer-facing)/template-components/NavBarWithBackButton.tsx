@@ -18,6 +18,11 @@ export default function NavBarWithBackButton() {
           </div>
           </div>
           <div className='nav-text-italic'>
+            <a href="/">
+            <p>Home</p>
+            </a>
+          </div>
+          <div className='nav-text-italic'>
             <a href="/shop">
             <p>Shop</p>
             </a>
@@ -27,14 +32,11 @@ export default function NavBarWithBackButton() {
             <p>Info</p>
             </a>
           </div>
-          <div className='nav-text-italic'>
-            <p>FAQ</p>
-          </div>
         </div>
 
-        <ClientRenderedBackButton />
+        
         <Marquee/>
-    
+        <ClientRenderedBackButton />
         
       </div>
   );
