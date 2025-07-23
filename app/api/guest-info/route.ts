@@ -5,7 +5,6 @@ import { NextResponse } from 'next/server'
 export async function GET() {
   const cookieStore = cookies()
   const userId = cookieStore.get('user_id')?.value
-  console.log('userId cookie value:', userId)
 
   if (!userId) {
     return new NextResponse('Missing user_id cookie', { status: 400 })

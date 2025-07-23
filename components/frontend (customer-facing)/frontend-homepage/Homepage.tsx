@@ -1,6 +1,5 @@
 import NavBarWithBackButton from '../template-components/NavBarWithBackButton';
 import CUST_ID_P_TAG from '../template-components/CUST_ID_P_TAG';
-import ItemShelf from './homepage.subcomponents/itemShelf/ItemShelf';
 import ResponsiveImageGallery from './homepage.subcomponents/imageGallery/ResponsiveImageGallery';
 
 

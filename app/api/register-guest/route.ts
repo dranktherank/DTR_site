@@ -5,15 +5,12 @@ import { createClient } from '@supabase/supabase-js'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
 )
 
 export async function POST() {
-    console.log('[API] register-guest POST handler hit')
-    
   const cookieStore = cookies()
   const userId = cookieStore.get('user_id')?.value
-  console.log('userId cookie value:', userId)
 
   if (!userId) {
     return new NextResponse('Missing user_id cookie', { status: 400 })
@@ -27,20 +24,34 @@ export async function POST() {
   .maybeSingle()
   console.log('Check user result:', data, error)
 
+  // If they do, update their last_seen
+  if (data && !error) {
+    const { error: updateError } = await supabase
+      .from('USER')
+      .update({ last_seen: new Date() })
+      .eq('uuid', userId)
+    if (updateError) {
+      console.error('Error updating user last_seen:', updateError.message)
+      return new NextResponse(`Error updating user last_seen: ${updateError.message}`, { status: 500 })
+    }
+    else {
+      console.log(`User with uuid: ${userId} last_seen updated`)
+    }
+  }
+
+  // If the user doesn't exist, insert a new record with their cookie uuid
   if (!data && !error) {
     const { error: insertError, data: insertData } = await supabase
       .from('USER')
       .insert([{ uuid: userId }])
 
       if (insertError) {
-    console.error('Insert error:', insertError.message)
-    return new NextResponse(`Insert error: ${insertError.message}`, { status: 500 })
+        console.error('Insert error:', insertError.message)
+        return new NextResponse(`Insert error: ${insertError.message}`, { status: 500 })
     }
 
-    console.log('Insert result:', data)
-    console.log(`Inserted new user with uuid: ${userId}`)
+    console.log(`New user inserted with uuid: ${userId}`)
   }
 
-  console.log('User registered successfully:', userId)
   return new NextResponse('OK')
 }

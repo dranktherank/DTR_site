@@ -5,9 +5,8 @@ export function middleware(req: NextRequest) {
   const res = NextResponse.next()
   const cookieName = 'user_id'
   const existing = req.cookies.get(cookieName)
-  if (existing) {
-    //console.log(`Found existing user_id cookie: ${existing.value}`)
-  }
+  
+  // If the cookie doesn't exist, create a new one
   if (!existing) {
     const id = uuidv4()
     res.cookies.set({
@@ -21,5 +20,6 @@ export function middleware(req: NextRequest) {
     })
   }
 
+  // Site's redy for user
   return res
 }
