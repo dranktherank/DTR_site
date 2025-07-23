@@ -5,8 +5,8 @@
   grid-template-rows: 1fr; /* stretch row */
   height: 100%; /* needed for full height stretching */
   gap: 0;
-  border-top: 3px solid black;    /* top border */
-  border-bottom: 3px solid black; /* bottom border */
+  border-top: 1px solid black;    /* top border */
+  border-bottom: 1px solid black; /* bottom border */
 }
 
 .item1 {
@@ -87,6 +87,6 @@
 .item1 img,
 .item2 img {
   display: block;
-  width: 100%;
+  width: 90%;
   height: auto;
 }

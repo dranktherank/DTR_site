@@ -3,6 +3,9 @@ import InitGuest from '../components/middleware/InitGuest';
 
 export const metadata = {
   title: 'Drink The River',
+  icons: {
+    icon: '/favicon.png',
+  }
 };
 
 export default function RootLayout({ children }) {

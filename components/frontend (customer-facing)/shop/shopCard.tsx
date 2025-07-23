@@ -1,18 +1,10 @@
 import styles from './shopCard.module.css';
 import Image from 'next/image';
 
-interface ShopCardProps {
-  bg_color?: string;
-  img1: string;
-  img2: string;
-  text1: string;
-  text2: string;
-  text3: string;
-}
-
-export default function ShopCard({ bg_color, img1, img2, text1, text2, text3 }: ShopCardProps) {
+export default function ShopCard({ bg_color, img1, img2, text1, text2, text3 }) {
   return (
     <div className={styles.container}>
+      
       <div className={styles.item1}>
         <Image
           src={img1}
@@ -39,8 +31,11 @@ export default function ShopCard({ bg_color, img1, img2, text1, text2, text3 }: 
           <p>{text2}</p>
           <p>{text3}</p>
         </div>
-        <p>drink the river</p>
+        <p style={{ fontStyle: 'italic', textAlign: 'right' }}>
+          drink the river
+        </p>
       </div>
+      
     </div>
   );
 }
