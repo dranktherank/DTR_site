@@ -1,50 +1,92 @@
+/* DESKTOP: 1 row, 3 columns */
 .container {
   display: grid;
-  grid-template-columns: 50% 50%; /* Left and right columns equal width */
-  grid-template-rows: auto auto;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 1fr; /* stretch row */
+  height: 100%; /* needed for full height stretching */
   gap: 0;
-}
-
-.item1,
-.item2 {
-  grid-column: 1;
-  width: 100%; /* fill grid cell width */
-  position: relative;
+  border-top: 3px solid black;    /* top border */
+  border-bottom: 3px solid black; /* bottom border */
 }
 
 .item1 {
+  grid-column: 1;
   grid-row: 1;
+  width: 100%;
+  position: relative;
 }
 
 .item2 {
-  grid-row: 2;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  position: relative;
 }
 
+.rightcol {
+  grid-column: 3;
+  grid-row: 1;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  max-width: 100%;
+  align-self: stretch;
+  height: 100%;
+}
+
+.rightcol > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.rightcol h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.rightcol p {
+  margin: 0;
+  padding: 0;
+}
+
+.rightcol p:last-of-type {
+  margin-top: auto;
+  font-style: italic;
+  text-align: right;
+}
+
+/* MOBILE: 2 columns, 2 stacked images in column 1, rightcol spans both rows */
+@media (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .item1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .item2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .rightcol {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    padding: 0 0 0 0.5rem;
+  }
+}
+
+/* Make sure images are responsive */
 .item1 img,
 .item2 img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.item3 {
-  padding: 0rem 0rem 0rem 1rem;
-  
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  position: relative;
-  max-width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-
-.text-content {
-  color: white;
-  font-size: 1.2rem;
-  margin: 0;
-  padding: 0;
 }

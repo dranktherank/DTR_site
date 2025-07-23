@@ -1,7 +1,7 @@
 .shopcard-padding-between {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .card-full-width {
