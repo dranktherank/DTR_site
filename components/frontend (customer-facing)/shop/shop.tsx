@@ -26,7 +26,7 @@ const cardProps_3 = {
   img1: '/product_images/deer_1.webp',
   img2: '/product_images/deer_2.webp',
   text1: 'Dueling deer t-shirt',
-  text2: '100% pure silk t-shirt, homemade in the deep in the Amazon with love by the indigenous people of the Amazon rainforest and shipped to you with love from the Amazon rainforest.',
+  text2: '100% pure silk t-shirt, homemade in the deep in the old-timey village with love by the people of the old-timey village and shipped to you with love from the last soda shop still making sodas the old fashioned way.',
   text3: '$69.99'
 };
 
