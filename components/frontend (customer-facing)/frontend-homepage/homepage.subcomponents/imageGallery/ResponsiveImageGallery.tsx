@@ -12,7 +12,6 @@ const images = [
   '/gallery_images/6-450.webp',
   '/gallery_images/7-450.webp',
   '/gallery_images/8-450.webp',
-  '/gallery_images/9-450.webp',
   '/gallery_images/10-450.webp',
   '/gallery_images/11-450.webp',
   '/gallery_images/12-450.webp',

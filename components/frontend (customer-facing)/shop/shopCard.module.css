@@ -7,6 +7,7 @@
   gap: 0;
   border-top: 1px solid black;    /* top border */
   border-bottom: 1px solid black; /* bottom border */
+  margin: 0 auto; /* center the container */
 }
 
 .item1 {

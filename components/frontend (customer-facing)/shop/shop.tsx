@@ -23,8 +23,8 @@ const cardProps_2 = {
 
 const cardProps_3 = {
   bg_color: '#c6d4acff',
-  img1: '/product_images/deer_1.webp',
-  img2: '/product_images/deer_2.webp',
+  img1: '/product_images/deer_1_resized2.webp',
+  img2: '/product_images/deer_2_resized2.webp',
   text1: 'Dueling deer t-shirt',
   text2: '100% pure silk t-shirt, homemade in the deep in the old-timey village with love by the people of the old-timey village and shipped to you with love from the last soda shop still making sodas the old fashioned way.',
   text3: '$69.99'
